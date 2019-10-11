@@ -1,4 +1,4 @@
-package com.codetears.SimpleFactory.operation;
+package com.codetears.SimpleFactory;
 
 /**
  * @Description 运算

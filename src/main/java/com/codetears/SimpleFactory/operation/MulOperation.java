@@ -1,5 +1,7 @@
 package com.codetears.SimpleFactory.operation;
 
+import com.codetears.SimpleFactory.Operation;
+
 /**
  * @Description 乘法
  * @Date 2019-05-13 10:26
