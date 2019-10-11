@@ -18,6 +18,6 @@ public class Client {
         Double numB = b.nextDouble();
         System.out.println("请输入运算操作");
         Scanner operation = new Scanner(System.in);
-        System.out.println("运算结果为： " + OperationFactory.operation(numA, numB, operation.nextLine()).doOperation());
+        System.out.println("运算结果为： " + OperationFactory.operation.apply(numA, numB, operation.nextLine()).doOperation());
     }
 }

@@ -1,9 +1,9 @@
 package com.codetears.SimpleFactory;
 
-import com.codetears.SimpleFactory.operation.AddOperation;
-import com.codetears.SimpleFactory.operation.MulOperation;
-import com.codetears.SimpleFactory.operation.Operation;
-import com.codetears.SimpleFactory.operation.SubOperation;
+import com.codetears.SimpleFactory.operation.*;
+import io.vavr.Function3;
+
+import static io.vavr.API.*;
 
 /**
  * @Description 代理工厂
@@ -11,18 +11,12 @@ import com.codetears.SimpleFactory.operation.SubOperation;
  * @Author l'amour solitaire
  */
 public class OperationFactory {
-	
-	protected static Operation operation(Double numA, Double numB, String operation) {
-		switch (operation) {
-		case "+":
-			return new AddOperation(numA, numB);
-		case "-":
-			return new SubOperation(numA, numB);
-		case "*":
-			return new MulOperation(numA, numB);
-		default:
-			return new AddOperation(numA, numB);
-		}
-	}
+
+    static Function3<Double, Double, String, Operation> operation = (numA, numB, operation) -> Match(operation).of(
+            Case($("+"), new AddOperation(numA, numB)),
+            Case($("-"), new SubOperation(numA, numB)),
+            Case($("*"), new MulOperation(numA, numB)),
+            Case($("/"), new DivideOperation(numA, numB)),
+            Case($(), new Operation()));
 
 }
