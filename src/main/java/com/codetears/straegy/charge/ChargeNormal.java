@@ -5,7 +5,7 @@ package com.codetears.straegy.charge;
  * @Date 2019-05-13 13:49
  * @Author l'amour solitaire
  */
-public class ChargeNormal extends ChargeSuper {
+public class ChargeNormal extends BaseChargeSuper {
 
     @Override
     public double acceptCash(double money) {

@@ -1,8 +1,8 @@
 package com.codetears.straegy;
 
+import com.codetears.straegy.charge.BaseChargeSuper;
 import com.codetears.straegy.charge.ChargeNormal;
 import com.codetears.straegy.charge.ChargeRebate;
-import com.codetears.straegy.charge.ChargeSuper;
 
 /**
  * @Description
@@ -10,7 +10,7 @@ import com.codetears.straegy.charge.ChargeSuper;
  * @Author l'amour solitaire
  */
 public class ChargeContext {
-    public ChargeSuper charge = null;
+    public BaseChargeSuper charge = null;
 
     ChargeContext(String type) {
         switch (type) {
@@ -25,7 +25,7 @@ public class ChargeContext {
         }
     }
 
-    public double money(double money){
+    public double money(double money) {
         return charge.acceptCash(money);
     }
 

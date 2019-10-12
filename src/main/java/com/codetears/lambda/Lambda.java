@@ -29,13 +29,13 @@ public class Lambda {
 
 
         // 分组
-        Map<Integer, List<Apple>> group = appleList.stream().collect(Collectors.groupingBy(Apple::getId));
-
-        //
-        Map<Integer, Apple> map = appleList.stream().collect(Collectors.toMap(Apple::getId, a -> a, (k1, k2) -> k2));
-
-
-        Map<Integer, Apple> map1 = appleList.stream().filter(a -> "香蕉".equals(a.getName())).collect(Collectors.toMap(Apple::getId, a -> a, (k1, k2) -> k2));
+//        Map<Integer, List<Apple>> group = appleList.stream().collect(Collectors.groupingBy(Apple::getId));
+//
+//        //
+//        Map<Integer, Apple> map = appleList.stream().collect(Collectors.toMap(Apple::getId, a -> a, (k1, k2) -> k2));
+//
+//
+//        Map<Integer, Apple> map1 = appleList.stream().filter(a -> "香蕉".equals(a.getName())).collect(Collectors.toMap(Apple::getId, a -> a, (k1, k2) -> k2));
 
         Apple apple = appleList.stream().max(Comparator.comparingInt(Apple::getId)).get();
 

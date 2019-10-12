@@ -11,13 +11,13 @@ public class Client {
 
     public static void main(String[] args) {
         System.out.println("请输入数字A");
-        Scanner a = new Scanner(System.in);
+        Scanner a = new Scanner(System.in, "utf-8");
         Double numa = a.nextDouble();
         System.out.println("请输入数字B");
-        Scanner b = new Scanner(System.in);
+        Scanner b = new Scanner(System.in, "utf-8");
         Double numb = b.nextDouble();
         System.out.println("请输入运算操作");
-        Scanner operation = new Scanner(System.in);
+        Scanner operation = new Scanner(System.in, "utf-8");
         System.out.println("运算结果为： " + OperationFactory.operation.apply(numa, numb, operation.nextLine()).doOperation());
     }
 }

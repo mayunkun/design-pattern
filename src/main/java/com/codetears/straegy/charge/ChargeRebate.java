@@ -5,7 +5,7 @@ package com.codetears.straegy.charge;
  * @Date 2019-05-13 13:59
  * @Author l'amour solitaire
  */
-public class ChargeRebate extends ChargeSuper {
+public class ChargeRebate extends BaseChargeSuper {
 
     // 折扣率
     public double moneyRebate = 1d;

@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 public class Client {
 
     public static void main(String[] args) throws InterruptedException {
-        AbstractManager bossManager = new BossManager("老板"), ctoManager = new CtoManager(bossManager, "总监"), commonManager = new CommonManager(ctoManager, "经理");
+        BaseManager bossManager = new BossManager("老板"), ctoManager = new CtoManager(bossManager, "总监"), commonManager = new CommonManager(ctoManager, "经理");
 
         Request request = new Request();
         request.setType(1);
