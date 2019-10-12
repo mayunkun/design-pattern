@@ -3,8 +3,6 @@ package com.codetears;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,6 +12,7 @@ import java.util.List;
  * @Author l'amour solitaire
  */
 public class Test {
+    private static final int MAX_THREADS = 10000;
 
     public static String execCurl(String[] cmds) {
         ProcessBuilder process = new ProcessBuilder(cmds);
@@ -53,7 +52,7 @@ public class Test {
         String[] cmds16 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/80959607"};
         String[] cmds17 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/78602351"};
         List<String[]> list = Arrays.asList(cmds1, cmds2, cmds3, cmds4, cmds5, cmds6, cmds7, cmds8, cmds9, cmds10, cmds11, cmds12, cmds13, cmds14, cmds15, cmds16, cmds17);
-        for (int i=0; i<10000; i++){
+        for (int i = 0; i < MAX_THREADS; i++) {
             list.forEach((cmd) -> {
                 execCurl(cmd);
             });

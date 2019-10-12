@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class Lambda {
 
     public static void main(String[] args) {
-        List<Apple> appleList = new ArrayList<Apple>();//存放apple对象集合
+        List<Apple> appleList = new ArrayList<Apple>();
 
         Apple apple1 = new Apple(1, "苹果1", new BigDecimal("3.25"), 10);
         Apple apple12 = new Apple(1, "苹果2", new BigDecimal("1.35"), 20);
@@ -39,9 +39,9 @@ public class Lambda {
 
         Apple apple = appleList.stream().max(Comparator.comparingInt(Apple::getId)).get();
 
-        int a[] = {10, 5, 8};
+        int[] arrs = {10, 5, 8};
 
-        int min = Arrays.stream(a).min().getAsInt();
+        int min = Arrays.stream(arrs).min().getAsInt();
         System.out.println(min);
 
         System.out.println(JSONObject.toJSONString(apple));
