@@ -7,11 +7,11 @@ import java.math.BigDecimal;
  * @description CTO
  * @date 2019/10/12 下午2:17
  */
-public class CtoManager extends AbstractManager {
+public class CtoManager extends BaseManager {
     private static final BigDecimal DAYS = new BigDecimal("7");
     private static final BigDecimal MONEY = new BigDecimal("5000");
 
-    public CtoManager(AbstractManager supManager, String name) {
+    public CtoManager(BaseManager supManager, String name) {
         super.name = name;
         super.supManager = supManager;
     }

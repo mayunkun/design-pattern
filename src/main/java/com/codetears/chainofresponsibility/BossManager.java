@@ -7,7 +7,7 @@ import java.math.BigDecimal;
  * @description 老板
  * @date 2019/10/12 下午2:16
  */
-public class BossManager extends AbstractManager {
+public class BossManager extends BaseManager {
     private static final BigDecimal DAYS = new BigDecimal("20");
     private static final BigDecimal MONEY = new BigDecimal("10000");
 
