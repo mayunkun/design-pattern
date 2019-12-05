@@ -40,7 +40,6 @@ public class CtoManager extends BaseManager {
                 }
                 break;
             default:
-                break;
         }
     }
 }

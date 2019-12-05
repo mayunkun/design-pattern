@@ -7,5 +7,10 @@ package com.codetears.straegy.charge;
  */
 public abstract class BaseChargeSuper {
 
+    /**
+     * @author l'amour solitaire
+     * @description TODO
+     * @date 2019/10/14 上午10:27
+     */
     public abstract double acceptCash(double money);
 }

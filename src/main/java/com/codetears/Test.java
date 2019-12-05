@@ -51,13 +51,18 @@ public class Test {
         String[] cmds15 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/84891053"};
         String[] cmds16 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/80959607"};
         String[] cmds17 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/78602351"};
+        String[] cmds18 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/102499746"};
+        String[] cmds19 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/102541443"};
+        String[] cmds20 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/100139891"};
+        String[] cmds21 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/88423718"};
+        String[] cmds22 = {"curl", "-H", "Host: blog.csdn.net", "-H", "Cache-Control: max-age=0", "--compressed", "https://blog.csdn.net/kuangni5808/article/details/102803017"};
         List<String[]> list = Arrays.asList(cmds1, cmds2, cmds3, cmds4, cmds5, cmds6, cmds7, cmds8, cmds9, cmds10, cmds11, cmds12, cmds13, cmds14, cmds15, cmds16, cmds17);
         for (int i = 0; i < MAX_THREADS; i++) {
             list.forEach((cmd) -> {
                 execCurl(cmd);
             });
             try {
-                Thread.sleep(60000);
+                Thread.sleep(6000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

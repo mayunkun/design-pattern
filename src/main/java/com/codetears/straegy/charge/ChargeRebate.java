@@ -8,7 +8,7 @@ package com.codetears.straegy.charge;
 public class ChargeRebate extends BaseChargeSuper {
 
     // 折扣率
-    public double moneyRebate = 1d;
+    public double moneyRebate;
 
     public ChargeRebate(String rebate) {
         moneyRebate = Double.parseDouble(rebate);

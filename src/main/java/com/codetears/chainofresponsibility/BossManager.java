@@ -1,6 +1,17 @@
 package com.codetears.chainofresponsibility;
 
+import com.sun.jdi.VoidValue;
+import io.vavr.Function0;
+import io.vavr.Function1;
+import io.vavr.PartialFunction;
+import io.vavr.control.Option;
+
+import javax.swing.*;
 import java.math.BigDecimal;
+import java.util.Optional;
+import java.util.function.Function;
+
+import static io.vavr.API.*;
 
 /**
  * @author l'amour solitaire
@@ -19,6 +30,7 @@ public class BossManager extends BaseManager {
     public void deal(Request request) {
         int type = request.getType();
         BigDecimal amount = request.getAmount();
+
         switch (type) {
             case 1:
                 if (amount.compareTo(DAYS) > 0) {
