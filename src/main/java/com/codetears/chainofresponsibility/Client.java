@@ -12,17 +12,9 @@ public class Client {
     public static void main(String[] args) throws InterruptedException {
         BaseManager bossManager = new BossManager("老板"), ctoManager = new CtoManager(bossManager, "总监"), commonManager = new CommonManager(ctoManager, "经理");
 
-        Request request = new Request();
-        request.setType(1);
-        request.setAmount(new BigDecimal("115"));
+        Request request = new Request().setType(1).setAmount(new BigDecimal("13"));
 
         commonManager.deal(request);
-
-//        Request request1 = new Request();
-//        request1.setType(2);
-//        request1.setAmount(new BigDecimal("9500"));
-//
-//        commonManager.deal(request1);
 
     }
 }

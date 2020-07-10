@@ -1,6 +1,7 @@
 package com.codetears.chainofresponsibility;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.math.BigDecimal;
 
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
  * @date 2019/10/12 下午2:18
  */
 @Data
+@Accessors(chain = true)
 public class Request {
 
     /** 请求类型(1:请假 2:加薪)*/
